@@ -28,5 +28,10 @@ router.get("/burger/add", function(req, res) {
 })
 
 // devour burger
+router.post("burger/devour/:id", function(req, res) {
+    burger.UpdateOne(req.params.id, function() {
+        res,redirect("/index")
+    })
+})
 
 module.exports = router
