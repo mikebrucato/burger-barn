@@ -7,7 +7,7 @@ var burger = require("../models/burger.js")
 
 
 // redirect Index
-router.get(",", function (req, res) {
+router.get("/", function (req, res) {
     res.redirect("/index")
 })
 
@@ -21,8 +21,11 @@ router.get("/index", function(req, res) {
 })
 
 // add new burger
-
-
+router.get("/burger/add", function(req, res) {
+    burger.insertOne(req.body.burger_name, function() {
+        res,redirect("/index")
+    })
+})
 
 // devour burger
 
