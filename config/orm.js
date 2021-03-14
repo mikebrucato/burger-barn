@@ -85,5 +85,5 @@ var orm = {
   
 };
 
-// Export the orm object for the model (cat.js).
+// orm export
 module.exports = orm;

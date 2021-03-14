@@ -1,0 +1,8 @@
+.not-eaten {
+    float: left;
+    color: blue;
+}
+
+.eaten {
+    float: right;
+}
