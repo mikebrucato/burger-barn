@@ -20,7 +20,7 @@ router.get("/", function(req, res) {
 
 // Renders Index to DOM
 router.post("/api/burgers", function(req, res) {
-    burger.insertOne([
+    burgers.insertOne([
       "burger_name", "devoured"
     ], [
       req.body.burger_name, req.body.devoured
@@ -49,7 +49,7 @@ router.put("/api/burgers/:id", function(req, res) {
   });
 
 // devour burger
-router.post("/api/burger/devour/:id", function(req, res) {
+router.post("/api/burgers/:id", function(req, res) {
     burger.UpdateOne(req.params.id, function() {
         res.redirect("/index")
     })
